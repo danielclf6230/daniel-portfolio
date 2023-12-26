@@ -17,7 +17,7 @@ h3 {
 .vertical-timeline-element-content {
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
         0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    padding: 1em 3em !important;
+    padding: 2.5em 2em !important;
 }
 
 .date {
@@ -25,7 +25,8 @@ h3 {
 }
 
 #description {
-    margin: 1.5em 0 2em 0;
+    margin: 1em 0 1em 0;
+    font-size: 11px;
 }
 
 .button {
@@ -49,13 +50,4 @@ h3 {
 
 .schoolButton:hover {
     background-color: #f3bc3c;
-}
-
-@media only screen and (max-width: 1700px) {
-    .vertical-timeline-element-date {
-        display: block !important;
-        float: none !important;
-        color: rgb(44, 44, 44);
-        margin-top: 1.5em;
-    }
 }

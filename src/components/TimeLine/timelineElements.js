@@ -30,9 +30,7 @@ let timelineElements = [
       '◉ Provided technical support for personal computer operating systems ' +
       '◉ Facilitated network support and managed both hardware and software applications ' +
       '◉ Demonstrated robust problem-solving abilities coupled with effective communication skills ' +
-      '◉ Aided in the upgrade of hardware/software and system/network infrastructures ' +
-      '◉ Executed and maintained daily backup schedules for essential systems ' +
-      '◉ Contributed to IT inventory management and provided comprehensive operational support ',
+      '◉ Aided in the upgrade of hardware/software and system/network infrastructures ',
     date: 'October 2019 - February 2022',
     icon: 'work',
   },

@@ -26,7 +26,7 @@ const About = () => {
               idx={15}
             />
           </h1>
-          <p>
+          <p className='aboutme-p'>
             IT student at Southern Alberta Institute of Technology (SAIT) with
             expertise in React, Socket Io, Java, and a strong foundation in web
             development technologies (HTML, CSS, JS). Proficient in database
