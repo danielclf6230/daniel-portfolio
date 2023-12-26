@@ -10,12 +10,10 @@ const ProjectDisplay = () => {
   const { id } = useParams()
   const project = projectList[id]
 
-  // Check if project is undefined
   if (!project) {
     return <div>Error: Project not found</div>
   }
 
-  // Check if project.images is an array
   if (!Array.isArray(project.images)) {
     return <div>Error: Project images is not an array</div>
   }
