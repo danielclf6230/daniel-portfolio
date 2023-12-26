@@ -2,6 +2,7 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import TimeLine from '../TimeLine'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -33,16 +34,9 @@ const About = () => {
             Eager to contribute technical skills and a passion for innovation to
             a dynamic IT role.
           </p>
-          <p>
-            In my most recent position as an IT support engineer at a Law Firm,
-            I developed a keen understanding of user needs and expectations.
-            This unique perspective, combined with my coding skills, positions
-            me as a versatile frontend developer capable of addressing
-            challenges in a fast-paced development environment. During my time
-            at the Law Firm, I honed my ability to troubleshoot and resolve
-            issues promptly, ensuring a seamless user experience.
-          </p>
-          <p></p>
+        </div>
+        <div className="map-wrap">
+          <TimeLine />
         </div>
       </div>
       <Loader type="pacman" />
