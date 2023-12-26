@@ -44,8 +44,13 @@
 }
 
 .gitIcon {
-    font-size: 30px;
+    font-size: 40px;
     color: rgba(#000000, 0.7);
+    position: relative;
+
+    &:hover {
+        color: #ffd700 !important;
+    }
 }
 
 

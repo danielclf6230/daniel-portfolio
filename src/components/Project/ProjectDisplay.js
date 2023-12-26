@@ -1,8 +1,7 @@
 import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
 import { projectList } from '../helpers/ProjectList'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ImageSlider from '../../components/helpers/ImageSlider'
 import './ProjectDisplay.scss'
 
@@ -18,6 +17,18 @@ const ProjectDisplay = () => {
     return <div>Error: Project images is not an array</div>
   }
 
+  const getGitHubLink = () => {
+    switch (id) {
+      case '0':
+        return 'https://github.com/danielclf6230/cinematch'
+      case '1':
+        return 'https://github.com/danielclf6230/cinematch'
+
+      default:
+        return 'https://github.com/danielclf6230'
+    }
+  }
+
   return (
     <div className="project container">
       <ImageSlider slides={project.images} />
@@ -26,7 +37,9 @@ const ProjectDisplay = () => {
       <p>
         <b>Skills:</b> {project.skills}
       </p>
-      <FontAwesomeIcon icon={faGithub} className="gitIcon" />
+      <a target="_blank" rel="noreferrer" href={getGitHubLink()}>
+        <FaGithub className="gitIcon" />
+      </a>
     </div>
   )
 }

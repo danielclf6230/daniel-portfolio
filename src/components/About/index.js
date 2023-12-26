@@ -1,15 +1,7 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
-import {
-  faCss3,
-  faHtml5,
-  faJava,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -41,28 +33,16 @@ const About = () => {
             Eager to contribute technical skills and a passion for innovation to
             a dynamic IT role.
           </p>
+          <p>
+            In my most recent position as an IT support engineer at a Law Firm,
+            I developed a keen understanding of user needs and expectations.
+            This unique perspective, combined with my coding skills, positions
+            me as a versatile frontend developer capable of addressing
+            challenges in a fast-paced development environment. During my time
+            at the Law Firm, I honed my ability to troubleshoot and resolve
+            issues promptly, ensuring a seamless user experience.
+          </p>
           <p></p>
-          <p></p>
-        </div>
-
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faJava} color="#DD0031" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-          </div>
         </div>
       </div>
       <Loader type="pacman" />
