@@ -4,8 +4,8 @@
     justify-content: space-around;
     border-radius: 5px;
     margin-left: 10%;
-    margin-top: 180px;
-    width: 70%;
+    margin-top: 11vw;
+    width: 60vw;
 }
 
 .projectItem {
@@ -27,7 +27,7 @@
         background-size: cover;
         width: 100%;
         /* Cover the entire width of the container */
-        height: 380px;
+        height: 50vh;
         /* Adjust the height as needed */
         opacity: 0;
         animation: fadeIn 1s 1.5s;
@@ -37,7 +37,7 @@
 
     h1 {
         color: antiquewhite;
-        font-size: 20px;
+        font-size: 1.3vw;
         margin: 10px 0;
         text-align: center;
         animation: pulse 1s;
