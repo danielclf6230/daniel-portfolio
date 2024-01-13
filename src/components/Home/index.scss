@@ -138,6 +138,11 @@
         transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
         color: #EFD81D;
     }
+
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+        color: #9896f0;
+    }
 }
 
 @keyframes spincube {
@@ -148,11 +153,11 @@
     }
 
     16% {
-        transform: rotateY(-90deg) rotateZ(90deg);
+        transform: rotateY(-90deg)
     }
 
     33% {
-        transform: rotateY(-90deg) rotateX(90deg);
+        transform: rotateY(-90deg) rotateZ(90deg);
     }
 
     50% {
@@ -160,7 +165,7 @@
     }
 
     66% {
-        transform: rotateY(-270deg) rotateX(90deg);
+        transform: rotateY(-270deg) rotateZ(90deg);
     }
 
     83% {

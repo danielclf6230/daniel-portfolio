@@ -18,7 +18,7 @@ let timelineElements = [
     title: 'Southern Alberta Institute of Technology',
     location: 'Calgary, Canada',
     description:
-      'Mainly focus on JAVA, JavaScript, SQL, PL/SQL, HTML, CSS, Networking, Security',
+      'Mainly focus on JAVA, JavaScript, SQL, PL/SQL, HTML, CSS, Networking, Security. And self learning React, Socket.io and Python',
     date: 'May 2022 - December 2023',
     icon: 'school',
   },

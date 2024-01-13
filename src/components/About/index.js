@@ -26,13 +26,13 @@ const About = () => {
               idx={15}
             />
           </h1>
-          <p className='aboutme-p'>
+          <p className="aboutme-p">
             IT student at Southern Alberta Institute of Technology (SAIT) with
-            expertise in React, Socket Io, Java, and a strong foundation in web
-            development technologies (HTML, CSS, JS). Proficient in database
-            platforms including SQL, PLSQL, MySQL, PostgreSQL, and SQLPLUS.
-            Eager to contribute technical skills and a passion for innovation to
-            a dynamic IT role.
+            expertise in React, Socket Io, Java, Python and a strong foundation
+            in web development technologies (HTML, CSS, JS). Proficient in
+            database platforms including SQL, PLSQL, MySQL, PostgreSQL, and
+            SQLPLUS. Eager to contribute technical skills and a passion for
+            innovation to a dynamic IT role.
           </p>
         </div>
         <div className="map-wrap">

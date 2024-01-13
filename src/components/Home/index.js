@@ -11,6 +11,7 @@ import {
   faJava,
   faJsSquare,
   faReact,
+  faPython,
 } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => {
@@ -90,6 +91,9 @@ const Home = () => {
             </div>
             <div className="face5">
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            </div>
+            <div className="face6">
+              <FontAwesomeIcon icon={faPython} color="#9896f0" />
             </div>
           </div>
         </div>
