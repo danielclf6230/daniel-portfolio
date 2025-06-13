@@ -133,16 +133,14 @@ const Contact = () => {
           <br />
           Canada,
           <br />
-          Sage Hill Grove NW
-          <br />
           Calgary
           <br />
           <span>daniel@allenchow.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[51.173221, -114.137664]} zoom={15}>
+          <MapContainer center={[51.04305141087725, -114.07205002774839]} zoom={15}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[51.173221, -114.137664]}>
+            <Marker position={[51.04305141087725, -114.07205002774839]}>
               <Popup>Daniel lives here</Popup>
             </Marker>
           </MapContainer>
