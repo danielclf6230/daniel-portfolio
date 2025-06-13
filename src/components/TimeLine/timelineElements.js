@@ -1,15 +1,15 @@
 let timelineElements = [
   {
     id: 1,
-    title: 'Software Developer',
-    location: 'Canada & Hong Kong',
+    title: 'IT Specialist',
+    location: 'Canada Calgary',
     description:
-      '◉ Help startup company create a web app (Cinematch) ' +
-      '◉ Manage company 3E system ' +
-      '◉ Manage a startup online shopping application ' +
-      '◉ Satisfied customer’s request and deliver product on time ',
+      '◉ Provide technical support to field personnel, troubleshooting company systems, hardware, and software issues. ' +
+      '◉ Action and resolve tickets related to compliance requirements and field support requests using JIRA. ' +
+      '◉ Write and execute SQL queries to retrieve or update data in company databases. ' +
+      '◉ Utilize Power BI and Power Query for data visualization and analysis. ',
     buttonText: 'Projects',
-    date: 'August 2022 - Present',
+    date: 'April 2024 - Present',
     icon: 'work',
   },
 
@@ -25,12 +25,13 @@ let timelineElements = [
   {
     id: 3,
     title: 'IT Support Engineer',
-    location: 'Canada',
+    location: 'Hong Kong',
     description:
-      '◉ Provided technical support for personal computer operating systems ' +
-      '◉ Facilitated network support and managed both hardware and software applications ' +
-      '◉ Demonstrated robust problem-solving abilities coupled with effective communication skills ' +
-      '◉ Aided in the upgrade of hardware/software and system/network infrastructures ',
+      '◉ Delivered technical support for PC operating systems, hardware, and software applications. ' +
+      '◉ Managed the company website and conducted user acceptance testing (UAT) with clients. ' +
+      '◉ Administered network infrastructure, including IP phone and firewall configuration. ' +
+      '◉ Handled user account creation and modifications in Microsoft 365. ' +
+      '◉ Managed user access and permissions in Active Directory and DHCP. ',
     date: 'October 2019 - February 2022',
     icon: 'work',
   },
