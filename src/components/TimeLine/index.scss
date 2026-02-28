@@ -1,80 +1,209 @@
 .timeline-container {
   width: 100%;
-  padding: 2vh 2vw;
+  padding: 1.5vh 1.5vw;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(6, 214, 160, 0.14), transparent 35%),
+    radial-gradient(circle at top left, rgba(255, 215, 0, 0.14), transparent 30%),
+    rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
 }
 
 .timeline-title {
-  font-size: 2.5vw;
+  font-size: 2.1vw;
   font-family: 'Coolvetica';
   color: #ffd700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   font-weight: 400;
   margin-top: 1.5vh;
-  margin-bottom: 4vh;
-  margin-left: 2vw;
+  margin-bottom: 2.5vh;
+  margin-left: 1vw;
 }
 
 .timeline-wrapper {
   max-width: 100%;
+  max-height: calc(100vh - 160px);
   overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(6, 214, 160, 0.65) rgba(255, 255, 255, 0.08);
+}
+
+.timeline-wrapper .vertical-timeline {
+  padding-top: 0;
+  padding-right: 28px;
+  padding-bottom: 28px;
+}
+
+.timeline-wrapper .vertical-timeline-element:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06d6a0, #00bfa6);
+  border-radius: 999px;
 }
 
 .timeline-date {
-  color: #ffffff !important;
+  color: #d7fff6 !important;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-align: left;
   margin-top: -5px;
 }
 
 .vertical-timeline-element-content {
-  max-width: 600px !important;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  max-width: 520px !important;
+  padding: 16px;
+  border-radius: 14px;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .vertical-timeline-element-title {
-  margin: 0 0 5px;
-  font-weight: bold;
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #022c43;
 }
 
 .vertical-timeline-element-subtitle {
   margin: 0 0 10px;
-  font-style: italic;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(2, 44, 67, 0.75);
 }
 
 .description {
-  padding-left: 20px;
-  margin: 10px 0;
-  list-style-type: disc;
+  padding-left: 0;
+  margin: 10px 0 0;
+  list-style: none;
+}
+
+.description li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: #18384d;
+}
+
+.description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #06d6a0, #00bfa6);
 }
 
 .button {
   display: inline-block;
   margin-top: 10px;
-  padding: 8px 12px;
+  padding: 8px 14px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 999px;
   color: white;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   background-color: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.22);
 }
 
 .workButton {
-  background-color: #06d6a0;
+  background: linear-gradient(135deg, #06d6a0, #00bfa6);
 }
 
 .schoolButton {
-  background-color: #f9c74f;
-  color: black;
+  background: linear-gradient(135deg, #f9c74f, #f4a261);
+  color: #1f1f1f;
 }
 
 .vertical-timeline::before {
   background: #00bfa6;
+  width: 5px;
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(6, 214, 160, 0.35);
+}
+
+.vertical-timeline-element-icon {
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.08),
+    0 10px 22px rgba(0, 0, 0, 0.28) !important;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    filter 0.22s ease;
+}
+
+.timeline-element:hover .vertical-timeline-element-icon {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.12),
+    0 14px 28px rgba(0, 0, 0, 0.34) !important;
+  filter: saturate(1.1);
+}
+
+.timeline-element .vertical-timeline-element-icon svg {
+  transition: transform 0.22s ease;
+}
+
+.timeline-element:hover .vertical-timeline-element-icon svg {
+  transform: scale(1.05);
+}
+
+.timeline-element.is-work .vertical-timeline-element-icon svg {
+  color: #022c43;
+}
+
+.timeline-element.is-school .vertical-timeline-element-icon svg {
+  color: #5d4300;
 }
 
 // 📱 Mobile layout fix
 @media screen and (max-width: 768px) {
+  .timeline-container {
+    padding: 1.5vh 2.5vw;
+    border-radius: 16px;
+  }
+
+  .timeline-wrapper {
+    max-height: calc(100vh - 140px);
+    padding-right: 10px;
+    padding-bottom: 16px;
+  }
+
+  .timeline-wrapper .vertical-timeline {
+    padding-right: 12px;
+    padding-bottom: 20px;
+  }
+
   .timeline-title {
     font-size: 6vw;
     margin-left: 0;
@@ -83,6 +212,7 @@
 
   .vertical-timeline-element-content {
     max-width: 90% !important;
+    padding: 14px;
   }
 
   .timeline-date {
@@ -90,5 +220,13 @@
     font-size: 13px;
     margin-bottom: 10px;
     // left: 130% !important;
+  }
+
+  .vertical-timeline-element-title {
+    font-size: 1.6rem;
+  }
+
+  .description li {
+    font-size: 1.1rem;
   }
 }

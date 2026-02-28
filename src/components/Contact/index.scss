@@ -1,103 +1,167 @@
+.contact-page {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(2rem, 3vw, 4rem);
+    padding: clamp(2rem, 3vh, 4rem) clamp(2rem, 4vw, 5rem) clamp(2rem, 3vh, 4rem) clamp(3rem, 5vw, 7rem);
+    align-items: stretch;
+}
+
+.contact-page .text-zone {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-height: none;
+    padding: 2rem 2.2rem;
+    border-radius: 2.4rem;
+    background: var(--color-panel);
+    border: 1px solid var(--color-panel-border);
+    box-shadow: var(--shadow-soft);
+}
+
 .contact-form {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 2.4rem;
 
     ul {
         padding: 0;
         margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem;
 
         li {
             padding: 0;
             margin: 0;
             list-style: none;
-            margin-bottom: 10px;
             overflow: hidden;
             display: block;
             position: relative;
             opacity: 0;
             animation: fadeInUp 2s 2s;
             animation-fill-mode: forwards;
-            clear: both;
         }
 
         li.half {
-            width: 49%;
-            margin-left: 2%;
-            float: left;
-            clear: none;
+            width: 100%;
+        }
 
-            &:first-child {
-                margin-left: 0;
-            }
+        li:not(.half) {
+            grid-column: 1 / -1;
+        }
+
+        li:last-child {
+            display: flex;
+            justify-content: flex-end;
         }
     }
 
     input[type='text'],
     input[type='email'] {
         width: 100%;
-        border: 0;
-        background: #115173;
-        height: 50px;
-        font-size: 16px;
-        color: antiquewhite;
-        padding: 0 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(17, 81, 115, 0.7);
+        height: 5.2rem;
+        font-size: 1.5rem;
+        color: #f6fbff;
+        padding: 0 1.8rem;
         box-sizing: border-box;
+        border-radius: 1.4rem;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background-color 0.2s ease;
     }
 
     textarea {
         width: 100%;
-        border: 0;
-        background: #115173;
-        height: 50px;
-        font-size: 16px;
-        color: antiquewhite;
-        padding: 20px;
-        min-height: 150px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(17, 81, 115, 0.7);
+        font-size: 1.5rem;
+        color: #f6fbff;
+        padding: 1.6rem 1.8rem;
+        min-height: 16rem;
         box-sizing: border-box;
+        border-radius: 1.4rem;
+        resize: vertical;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+    input[type='text']:focus,
+    input[type='email']:focus,
+    textarea:focus {
+        outline: none;
+        border-color: rgba(6, 214, 160, 0.45);
+        box-shadow: 0 0 0 4px rgba(6, 214, 160, 0.12);
+        background: rgba(17, 81, 115, 0.9);
     }
 
     .flat-button {
-        color: #ffd700;
-        background: 0 0;
-        font: 11px;
-        letter-spacing: 3px;
+        color: #022c43;
+        background: linear-gradient(135deg, #ffd700, #f7e27b);
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.22rem;
         text-decoration: none;
-        padding: 8px 10px;
-        border: 1px solid #ffd700;
-        float: right;
-        border-radius: 4px;
+        padding: 1.1rem 1.8rem;
+        border: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .flat-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 26px rgba(0, 0, 0, 0.26);
     }
 }
 
 .info-map {
     position: absolute;
-    background-color: #000;
-    top: 50px;
-    right: 25%;
+    background: rgba(3, 27, 41, 0.88);
+    top: 2.2rem;
+    right: 2.2rem;
     z-index: 999999;
-    width: 267px;
-    padding: 20px;
+    width: min(26rem, calc(100% - 4.4rem));
+    padding: 1.8rem;
     color: #fff;
-    font-family: 'Helvetica';
-    font-size: 17px;
+    font-family: 'Helvetica Neue';
+    font-size: 1.5rem;
     font-weight: 300;
     opacity: 0;
+    border-radius: 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-soft);
     animation: fadeIn 1s 1.5s;
     animation-fill-mode: forwards;
 
     span {
-        font-size: 16px;
+        font-size: 1.4rem;
         display: block;
-        padding-top: 20px;
+        padding-top: 1.2rem;
         color: #ffd700;
     }
 }
 
 .map-wrap {
-    background: rgba(8, 253, 216, 0.1);
-    float: right;
-    width: 53%;
-    height: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 48rem;
+    background: rgba(8, 253, 216, 0.08);
+    border-radius: 2.4rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-soft);
 }
 
 .leaflet-container {
@@ -107,4 +171,47 @@
     opacity: 0;
     animation: backInRight 1s 1.2s;
     animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1100px) {
+    .contact-page {
+        grid-template-columns: 1fr;
+        padding: 2rem 2.4rem 2.6rem;
+    }
+
+    .map-wrap {
+        min-height: 36rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-page {
+        padding: 1.4rem 1.6rem 2rem;
+        gap: 1.6rem;
+    }
+
+    .contact-page .text-zone {
+        padding: 1.6rem;
+        border-radius: 1.8rem;
+    }
+
+    .contact-form ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form ul li.half {
+        grid-column: 1 / -1;
+    }
+
+    .map-wrap {
+        min-height: 30rem;
+        border-radius: 1.8rem;
+    }
+
+    .info-map {
+        top: 1.4rem;
+        right: 1.4rem;
+        width: min(22rem, calc(100% - 2.8rem));
+        padding: 1.4rem;
+    }
 }

@@ -1,55 +1,221 @@
+.project-page {
+    display: grid;
+    grid-template-columns: minmax(220px, 28%) minmax(0, 1fr);
+    gap: 3vw;
+    padding: 4vh 5vw 5vh 7vw;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(6, 214, 160, 0.12), transparent 24%),
+        radial-gradient(circle at 18% 30%, rgba(255, 215, 0, 0.14), transparent 20%);
+}
+
+.project-page .text-zone.project-hero {
+    position: sticky;
+    top: 7vh;
+    left: auto;
+    transform: none;
+    width: auto;
+    max-height: fit-content;
+    align-self: start;
+    padding: 2.2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-page .text-zone.project-hero h1 {
+    margin-left: 0;
+    margin-bottom: 2.2rem;
+    font-size: 5.2rem;
+    line-height: 0.95;
+}
+
+.project-intro {
+    margin: 0;
+    min-width: 0;
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+    color: #e8f7ff !important;
+}
+
 .projectList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-radius: 5px;
-    margin-left: 10%;
-    margin-top: 11vw;
-    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 2.2rem;
+    width: 100%;
+    align-content: start;
+    padding-bottom: 3vh;
 }
 
 .projectItem {
-    margin-top: 20px;
-    margin: 20px;
     position: relative;
+    min-height: 34rem;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    border: 0;
+    border-radius: 24px;
     overflow: hidden;
-    flex: 1;
-    /* This ensures equal distribution of space among items */
-    max-width: calc(33.333% - 20px);
-    /* Adjust the percentage and margin as needed */
-    box-sizing: border-box;
-    border-radius: 15px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+    text-align: left;
+    cursor: pointer;
+    background: #0a324b;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+    animation: fadeIn 1s 1.2s;
+    animation-fill-mode: backwards;
+}
 
+.projectItem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+}
 
-    .bgImage {
-        background-size: cover;
-        width: 100%;
-        /* Cover the entire width of the container */
-        height: 50vh;
-        /* Adjust the height as needed */
-        opacity: 0;
-        animation: fadeIn 1s 1.5s;
-        animation-fill-mode: forwards;
+.projectItem:focus-visible {
+    outline: 2px solid #ffd700;
+    outline-offset: 4px;
+}
 
+.projectItem .bgImage {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    transform: scale(1);
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+.projectItem:hover .bgImage {
+    transform: scale(1.06);
+    filter: saturate(1.08);
+}
+
+.projectCardOverlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(2, 44, 67, 0.08) 0%, rgba(2, 44, 67, 0.42) 42%, rgba(2, 44, 67, 0.94) 100%),
+        linear-gradient(135deg, rgba(6, 214, 160, 0.15), transparent 45%);
+}
+
+.projectCardContent {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.projectCardLabel {
+    width: fit-content;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 215, 0, 0.14);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    color: #ffe38a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.projectCardContent h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Coolvetica';
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.projectCardContent p {
+    margin: 0;
+    color: rgba(232, 247, 255, 0.9);
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.projectCardAction {
+    width: fit-content;
+    margin-top: 0.6rem;
+    color: #7ef5d4;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+@media screen and (max-width: 1100px) {
+    .project-page {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+        padding: 10vh 5vw 4vh;
     }
 
-    h1 {
-        color: antiquewhite;
-        font-size: 1.3vw;
-        margin: 10px 0;
-        text-align: center;
-        animation: pulse 1s;
-
-        &:nth-of-type(1) {
-            animation-delay: 2.1s;
-        }
+    .project-page .text-zone.project-hero {
+        position: relative;
+        top: auto;
     }
 
-    &:hover {
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-        transition: 0.3s ease-in;
-        cursor: pointer;
+    .project-page .text-zone.project-hero h1 {
+        margin-bottom: 1.6rem;
+        font-size: 4.6rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .projectList {
+        grid-template-columns: 1fr;
+    }
+
+    .projectItem {
+        min-height: 30rem;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-page {
+        padding: 9vh 4vw 3vh;
+    }
+
+    .project-page .text-zone.project-hero {
+        padding: 1.8rem;
+        border-radius: 18px;
+    }
+
+    .project-page .text-zone.project-hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .project-intro {
+        font-size: 1.3rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .projectItem {
+        min-height: 26rem;
+        aspect-ratio: 16 / 11;
+        border-radius: 20px;
+    }
+
+    .projectCardContent {
+        padding: 1.6rem;
+    }
+
+    .projectCardContent h2 {
+        font-size: 2.4rem;
+    }
+
+    .projectCardContent p {
+        font-size: 1.2rem;
     }
 }

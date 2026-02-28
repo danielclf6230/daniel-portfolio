@@ -42,9 +42,26 @@ const TimeLine = () => {
             return (
               <VerticalTimelineElement
                 key={element.id}
+                className={`timeline-element ${
+                  isWorkIcon ? 'is-work' : 'is-school'
+                }`}
                 date={element.date}
                 dateClassName="timeline-date"
                 iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+                contentStyle={{
+                  background: isWorkIcon
+                    ? 'linear-gradient(135deg, #ffffff 0%, #e8fffa 100%)'
+                    : 'linear-gradient(135deg, #fffdf4 0%, #fff2bf 100%)',
+                  border: `1px solid ${
+                    isWorkIcon ? 'rgba(6, 214, 160, 0.35)' : 'rgba(249, 199, 79, 0.45)'
+                  }`,
+                  boxShadow: '0 18px 40px rgba(0, 0, 0, 0.2)',
+                }}
+                contentArrowStyle={{
+                  borderRight: `7px solid ${
+                    isWorkIcon ? '#d4fff3' : '#fff0ab'
+                  }`,
+                }}
                 icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
               >
                 <h3 className="vertical-timeline-element-title">

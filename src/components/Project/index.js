@@ -19,7 +19,7 @@ const Project = () => {
   return (
     <>
       <div className="container project-page">
-        <div className="col text-zone">
+        <div className="col text-zone project-hero">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -27,11 +27,22 @@ const Project = () => {
               idx={15}
             />
           </h1>
+          <p className="project-intro">
+            A focused selection of full-stack builds, UI experiments, and
+            practical web applications. Each project balances usability,
+            implementation quality, and clear technical decisions.
+          </p>
         </div>
         <div className="projectList">
           {projectList.map((project, idx) => {
             return (
-              <ProjectItem id={idx} name={project.name} image={project.image} />
+              <ProjectItem
+                key={project.name}
+                id={idx}
+                name={project.name}
+                image={project.image}
+                skills={project.skills}
+              />
             )
           })}
         </div>

@@ -2,15 +2,16 @@ const timelineElements = [
   {
     id: 1,
     title: 'IT Specialist',
-    location: 'Calgary, Canada',
+    location: 'Kognitive Sales Solutions, Calgary, Canada',
     description: [
-      'Provided technical support to field personnel, resolving hardware, software, and system issues.',
-      'Managed and resolved compliance-related and field support tickets via JIRA.',
-      'Wrote and executed SQL queries to retrieve and update data in company databases.',
-      'Developed data visualizations and reports using Power BI and Power Query.',
+      'Provided technical support to field personnel, troubleshooting company systems, hardware, and software issues.',
+      'Actioned and resolved tickets related to compliance requirements and field support requests using JIRA.',
+      'Wrote and executed SQL queries to retrieve or update data in company databases.',
+      'Utilized Power BI and Power Query for data visualization and analysis.',
+      'Collaborated with cross-functional teams to address compliance concerns and implement corrective actions.',
     ],
     buttonText: 'View Projects',
-    date: 'April 2024 – Present',
+    date: 'April 2024 – April 2025',
     icon: 'work',
   },
   {
@@ -35,6 +36,20 @@ const timelineElements = [
       'Created and managed user accounts in Microsoft 365, Active Directory, and DHCP.',
     ],
     date: 'October 2019 – February 2022',
+    icon: 'work',
+  },
+  {
+    id: 4,
+    title: 'IT Support / HR Systems Developer',
+    location: 'New Way Trucking Ltd.',
+    description: [
+      'Built a full-stack HR web application from scratch using React, Node.js, and MySQL.',
+      'Designed and implemented the complete database schema to support user, task, and document management.',
+      'Developed Python tools to streamline internal HR processes and improve operational efficiency.',
+      'Configured firewall and security layers to safeguard internal systems and user data.',
+      'Provided comprehensive IT support for software and hardware troubleshooting and system maintenance.',
+    ],
+    date: 'Earlier Experience',
     icon: 'work',
   },
 ];

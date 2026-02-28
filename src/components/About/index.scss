@@ -1,3 +1,50 @@
+.about-page {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2rem, 3vw, 4rem);
+    padding: clamp(2rem, 3vh, 4rem) clamp(2rem, 4vw, 5rem) clamp(2rem, 3vh, 4rem) clamp(3rem, 5vw, 7rem);
+    align-items: start;
+}
+
+.about-page .text-zone {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-height: none;
+    align-self: center;
+}
+
+.about-page .aboutme-p {
+    margin: 0;
+    padding: 2rem 2.2rem;
+    border-radius: 2rem;
+    background: var(--color-panel);
+    border: 1px solid var(--color-panel-border);
+    box-shadow: var(--shadow-soft);
+}
+
 .map-wrap {
-    margin-right: 20px;
+    min-width: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .about-page {
+        grid-template-columns: 1fr;
+        padding: 2rem 2.4rem 2.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding: 1.4rem 1.6rem 2rem;
+        gap: 1.6rem;
+    }
+
+    .about-page .aboutme-p {
+        padding: 1.6rem;
+        border-radius: 1.6rem;
+    }
 }
