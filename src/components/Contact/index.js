@@ -128,16 +128,16 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="info-map">
-          Daniel Chow,
-          <br />
-          Canada,
-          <br />
-          Calgary
-          <br />
-          <span>daniel@allenchow.com</span>
-        </div>
         <div className="map-wrap">
+          <div className="info-map">
+            Daniel Chow,
+            <br />
+            Canada,
+            <br />
+            Calgary
+            <br />
+            <span>daniel@allenchow.com</span>
+          </div>
           <MapContainer center={[51.04305141087725, -114.07205002774839]} zoom={15}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[51.04305141087725, -114.07205002774839]}>

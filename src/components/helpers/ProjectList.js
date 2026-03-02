@@ -18,6 +18,11 @@ import Project3b from '../../assets/images/Project3b.png'
 import Project3c from '../../assets/images/Project3c.png'
 import Project3d from '../../assets/images/Project3d.png'
 import Project3e from '../../assets/images/Project3e.png'
+import Project4 from '../../assets/images/Project4.png'
+import Project4a from '../../assets/images/Project4a.png'
+import Project4b from '../../assets/images/Project4b.png'
+import Project4c from '../../assets/images/Project4c.png'
+import Project4d from '../../assets/images/Project4d.png'
 
 export const projectList = [
   {
@@ -59,6 +64,18 @@ export const projectList = [
       { url: Project2c },
       { url: Project2d },
       { url: Project2e },
+    ],
+  },
+  {
+    name: 'Daily Cost App',
+    image: Project4,
+    skills: 'React, Node.js, Express, JavaScript, HTML, CSS',
+    images: [
+      { url: Project4 },
+      { url: Project4a },
+      { url: Project4b },
+      { url: Project4c },
+      { url: Project4d },
     ],
   },
 ]

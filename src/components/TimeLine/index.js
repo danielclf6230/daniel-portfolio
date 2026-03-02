@@ -4,11 +4,6 @@ import { ReactComponent as SchoolIcon } from './school.svg'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import timelineElements from './timelineElements'
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component'
-import 'react-vertical-timeline-component/style.min.css'
 
 const TimeLine = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -20,9 +15,6 @@ const TimeLine = () => {
     return () => clearTimeout(timeoutId)
   }, [])
 
-  const workIconStyles = { background: '#06D6A0' }
-  const schoolIconStyles = { background: '#f9c74f' }
-
   return (
     <div className="timeline-container">
       <h1 className="timeline-title">
@@ -33,43 +25,28 @@ const TimeLine = () => {
         />
       </h1>
 
-      <div className="timeline-wrapper">
-        <VerticalTimeline lineColor="#00bfa6">
-          {timelineElements.map((element) => {
-            const isWorkIcon = element.icon === 'work'
-            const showButton = element.buttonText?.trim()
+      <div className="timeline-list">
+        {timelineElements.map((element, index) => {
+          const isWorkIcon = element.icon === 'work'
+          const showButton = element.buttonText?.trim()
+          const Icon = isWorkIcon ? WorkIcon : SchoolIcon
+          const sideClass = index % 2 === 0 ? 'is-right' : 'is-left'
 
-            return (
-              <VerticalTimelineElement
-                key={element.id}
-                className={`timeline-element ${
-                  isWorkIcon ? 'is-work' : 'is-school'
-                }`}
-                date={element.date}
-                dateClassName="timeline-date"
-                iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-                contentStyle={{
-                  background: isWorkIcon
-                    ? 'linear-gradient(135deg, #ffffff 0%, #e8fffa 100%)'
-                    : 'linear-gradient(135deg, #fffdf4 0%, #fff2bf 100%)',
-                  border: `1px solid ${
-                    isWorkIcon ? 'rgba(6, 214, 160, 0.35)' : 'rgba(249, 199, 79, 0.45)'
-                  }`,
-                  boxShadow: '0 18px 40px rgba(0, 0, 0, 0.2)',
-                }}
-                contentArrowStyle={{
-                  borderRight: `7px solid ${
-                    isWorkIcon ? '#d4fff3' : '#fff0ab'
-                  }`,
-                }}
-                icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
-              >
-                <h3 className="vertical-timeline-element-title">
-                  {element.title}
-                </h3>
-                <h5 className="vertical-timeline-element-subtitle">
-                  {element.location}
-                </h5>
+          return (
+            <article
+              key={element.id}
+              className={`timeline-item ${isWorkIcon ? 'is-work' : 'is-school'} ${sideClass}`}
+            >
+              <div className="timeline-marker" aria-hidden="true">
+                <span className="timeline-icon">
+                  <Icon />
+                </span>
+              </div>
+
+              <div className="timeline-card">
+                <p className="timeline-date">{element.date}</p>
+                <h3 className="timeline-item-title">{element.title}</h3>
+                <h5 className="timeline-item-subtitle">{element.location}</h5>
                 <ul className="description">
                   {element.description.map((desc, idx) => (
                     <li key={idx}>{desc}</li>
@@ -77,9 +54,7 @@ const TimeLine = () => {
                 </ul>
                 {showButton && (
                   <a
-                    className={`button ${
-                      isWorkIcon ? 'workButton' : 'schoolButton'
-                    }`}
+                    className={`button ${isWorkIcon ? 'workButton' : 'schoolButton'}`}
                     href="https://github.com/danielclf6230"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -87,10 +62,10 @@ const TimeLine = () => {
                     {element.buttonText}
                   </a>
                 )}
-              </VerticalTimelineElement>
-            )
-          })}
-        </VerticalTimeline>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </div>
   )

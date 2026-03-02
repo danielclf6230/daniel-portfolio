@@ -1,5 +1,19 @@
 const timelineElements = [
   {
+    id: 4,
+    title: 'IT Support / HR Systems Developer',
+    location: 'New Way Trucking Ltd.',
+    description: [
+      'Built a full-stack HR web application from scratch using React, Node.js, and MySQL.',
+      'Designed and implemented the complete database schema to support user, task, and document management.',
+      'Developed Python tools to streamline internal HR processes and improve operational efficiency.',
+      'Configured firewall and security layers to safeguard internal systems and user data.',
+      'Provided comprehensive IT support for software and hardware troubleshooting and system maintenance.',
+    ],
+    date: 'Most Recent Experience',
+    icon: 'work',
+  },
+  {
     id: 1,
     title: 'IT Specialist',
     location: 'Kognitive Sales Solutions, Calgary, Canada',
@@ -36,20 +50,6 @@ const timelineElements = [
       'Created and managed user accounts in Microsoft 365, Active Directory, and DHCP.',
     ],
     date: 'October 2019 – February 2022',
-    icon: 'work',
-  },
-  {
-    id: 4,
-    title: 'IT Support / HR Systems Developer',
-    location: 'New Way Trucking Ltd.',
-    description: [
-      'Built a full-stack HR web application from scratch using React, Node.js, and MySQL.',
-      'Designed and implemented the complete database schema to support user, task, and document management.',
-      'Developed Python tools to streamline internal HR processes and improve operational efficiency.',
-      'Configured firewall and security layers to safeguard internal systems and user data.',
-      'Provided comprehensive IT support for software and hardware troubleshooting and system maintenance.',
-    ],
-    date: 'Earlier Experience',
     icon: 'work',
   },
 ];

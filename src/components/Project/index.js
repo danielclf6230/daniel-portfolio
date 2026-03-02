@@ -27,11 +27,6 @@ const Project = () => {
               idx={15}
             />
           </h1>
-          <p className="project-intro">
-            A focused selection of full-stack builds, UI experiments, and
-            practical web applications. Each project balances usability,
-            implementation quality, and clear technical decisions.
-          </p>
         </div>
         <div className="projectList">
           {projectList.map((project, idx) => {

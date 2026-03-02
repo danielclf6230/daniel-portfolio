@@ -1,7 +1,7 @@
 .project-page {
     display: grid;
-    grid-template-columns: minmax(220px, 28%) minmax(0, 1fr);
-    gap: 3vw;
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
     padding: 4vh 5vw 5vh 7vw;
     box-sizing: border-box;
     overflow-y: auto;
@@ -12,11 +12,12 @@
 }
 
 .project-page .text-zone.project-hero {
-    position: sticky;
-    top: 7vh;
+    position: relative;
+    top: auto;
     left: auto;
     transform: none;
-    width: auto;
+    width: 100%;
+    max-width: none;
     max-height: fit-content;
     align-self: start;
     padding: 2.2rem;
@@ -44,17 +45,22 @@
 
 .projectList {
     display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
     gap: 2.2rem;
     width: 100%;
     align-content: start;
+    align-items: stretch;
     padding-bottom: 3vh;
 }
 
 .projectItem {
     position: relative;
-    min-height: 34rem;
-    aspect-ratio: 4 / 3;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 30rem;
+    height: clamp(30rem, 32vw, 38rem);
+    aspect-ratio: auto;
     padding: 0;
     border: 0;
     border-radius: 24px;
@@ -132,9 +138,10 @@
     margin: 0;
     color: #ffffff;
     font-family: 'Coolvetica';
-    font-size: 3rem;
+    font-size: clamp(2.4rem, 2vw, 3rem);
     font-weight: 400;
     letter-spacing: 0.03em;
+    line-height: 1.05;
 }
 
 .projectCardContent p {
@@ -155,14 +162,11 @@
 
 @media screen and (max-width: 1100px) {
     .project-page {
-        grid-template-columns: 1fr;
-        gap: 2.4rem;
-        padding: 10vh 5vw 4vh;
+        padding: 9vh 5vw 4vh;
     }
 
     .project-page .text-zone.project-hero {
-        position: relative;
-        top: auto;
+        padding: 2rem;
     }
 
     .project-page .text-zone.project-hero h1 {
@@ -172,13 +176,10 @@
 }
 
 @media screen and (max-width: 900px) {
-    .projectList {
-        grid-template-columns: 1fr;
-    }
-
     .projectItem {
-        min-height: 30rem;
+        min-height: 28rem;
         aspect-ratio: 16 / 10;
+        height: auto;
     }
 }
 

@@ -19,9 +19,16 @@ const Home = () => {
 
   const nameArray = ['a', 'n', 'i', 'e', 'l']
   const jobArray = [
-    'w',
-    'e',
-    'b',
+    'f',
+    'u',
+    'l',
+    'l',
+    ' ',
+    's',
+    't',
+    'a',
+    'c',
+    'k',
     ' ',
     'd',
     'e',
@@ -55,7 +62,7 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m</span>
             <img
               src={LogoTitle}
-              alt="JavaScript Developer Name, Web Developer Name"
+              alt="Daniel Chow logo"
             />
             <AnimatedLetters
               letterClass={letterClass}
@@ -69,7 +76,7 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Front End Developer / Java Expert / JavaScript Expert</h2>
+          <h2>Full Stack Developer / Java / JavaScript</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>

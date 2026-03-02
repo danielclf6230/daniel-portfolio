@@ -1,9 +1,12 @@
 .about-page {
     display: grid;
     grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    min-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 4rem);
     gap: clamp(2rem, 3vw, 4rem);
     padding: clamp(2rem, 3vh, 4rem) clamp(2rem, 4vw, 5rem) clamp(2rem, 3vh, 4rem) clamp(3rem, 5vw, 7rem);
     align-items: start;
+    overflow: hidden;
 }
 
 .about-page .text-zone {
@@ -28,17 +31,22 @@
 .map-wrap {
     min-width: 0;
     width: 100%;
+    min-height: 0;
+    height: 100%;
 }
 
 @media screen and (max-width: 1100px) {
     .about-page {
         grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0, 1fr);
         padding: 2rem 2.4rem 2.6rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .about-page {
+        min-height: calc(100vh - 2.4rem);
+        max-height: calc(100vh - 2.4rem);
         padding: 1.4rem 1.6rem 2rem;
         gap: 1.6rem;
     }

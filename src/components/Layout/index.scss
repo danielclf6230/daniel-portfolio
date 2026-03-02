@@ -39,6 +39,13 @@
     animation-delay: 0.45s;
 }
 
+.container.about-page {
+    position: relative;
+    inset: auto;
+    min-height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem);
+}
+
 .about-page,
 .contact-page,
 .project-page {
@@ -125,6 +132,11 @@
         min-height: calc(100vh - 3.2rem);
     }
 
+    .container.about-page {
+        min-height: calc(100vh - 3.2rem);
+        height: calc(100vh - 3.2rem);
+    }
+
     .about-page,
     .contact-page,
     .project-page {
@@ -148,5 +160,10 @@
     .container {
         inset: 1.2rem 0;
         min-height: calc(100vh - 2.4rem);
+    }
+
+    .container.about-page {
+        min-height: calc(100vh - 2.4rem);
+        height: calc(100vh - 2.4rem);
     }
 }
