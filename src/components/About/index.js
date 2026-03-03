@@ -27,15 +27,13 @@ const About = () => {
             />
           </h1>
           <p className="aboutme-p">
-            IT student at Southern Alberta Institute of Technology (SAIT) with
-            expertise in React, Socket Io, Java, Python and a strong foundation
-            in web development technologies (HTML, CSS, JS). Proficient in
-            database platforms including SQL, PLSQL, MySQL, PostgreSQL, and
-            SQLPLUS. Eager to contribute technical skills and a passion for
-            innovation to a dynamic IT role.
+            SAIT IT student focused on React, Socket.IO, Java, and Python, with
+            hands-on experience across HTML, CSS, JavaScript, and SQL-based
+            databases. I build practical, full-stack solutions and enjoy turning
+            technical problems into clean, usable systems.
           </p>
         </div>
-        <div className="map-wrap">
+        <div className="timeline-wrap">
           <TimeLine />
         </div>
       </div>

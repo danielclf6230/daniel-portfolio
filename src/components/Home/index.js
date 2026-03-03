@@ -64,13 +64,14 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m</span>
             <span className="name-lockup">
               <img
+                className={`${letterClass} _15 logo-letter`}
                 src={LogoTitle}
                 alt="Daniel Chow logo"
               />
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={nameArray}
-                idx={15}
+                idx={16}
               />
             </span>
             <br />
@@ -89,6 +90,7 @@ const Home = () => {
             </span>
           </h1>
           <h2>Full Stack Developer / Java / JavaScript</h2>
+          <span className="heading-close-tag">{'</h1>'}</span>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>

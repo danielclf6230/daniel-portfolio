@@ -2,8 +2,11 @@
     position: relative;
     width: calc(100% - var(--sidebar-width));
     min-height: 100vh;
+    height: 100vh;
     margin-left: var(--sidebar-width);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
 }
 
 .top-tags {
@@ -46,6 +49,13 @@
     height: calc(100vh - 4rem);
 }
 
+.container.contact-page {
+    position: relative;
+    inset: auto;
+    min-height: calc(100vh - 4rem);
+    height: auto;
+}
+
 .about-page,
 .contact-page,
 .project-page {
@@ -58,7 +68,7 @@
         max-height: 90%;
 
         h1 {
-            font-size: clamp(4.8rem, 5vw, 7.2rem);
+            font-size: clamp(4rem, 4.2vw, 5.8rem);
             font-family: 'Coolvetica';
             color: var(--color-accent);
             font-weight: 400;
@@ -92,12 +102,12 @@
         }
 
         p {
-            font-size: clamp(1.5rem, 1vw, 1.8rem);
+            font-size: clamp(1.2rem, 0.85vw, 1.45rem);
             color: var(--color-text-muted);
             font-family: 'Helvetica Neue', sans-serif;
             font-weight: 300;
             min-width: 0;
-            line-height: 1.75;
+            line-height: 1.6;
             animation: pulse 1s;
 
             &:nth-of-type(1) {
@@ -137,6 +147,11 @@
         height: calc(100vh - 3.2rem);
     }
 
+    .container.contact-page {
+        min-height: calc(100vh - 3.2rem);
+        height: auto;
+    }
+
     .about-page,
     .contact-page,
     .project-page {
@@ -155,6 +170,7 @@
 @media screen and (max-width: 768px) {
     .page {
         width: calc(100% - var(--sidebar-width));
+        height: 100dvh;
     }
 
     .container {
@@ -165,5 +181,10 @@
     .container.about-page {
         min-height: calc(100vh - 2.4rem);
         height: calc(100vh - 2.4rem);
+    }
+
+    .container.contact-page {
+        min-height: calc(100vh - 2.4rem);
+        height: auto;
     }
 }
