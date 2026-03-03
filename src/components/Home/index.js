@@ -19,18 +19,20 @@ const Home = () => {
 
   const nameArray = ['a', 'n', 'i', 'e', 'l']
   const jobArray = [
-    'f',
+    'F',
     'u',
     'l',
     'l',
     ' ',
-    's',
+    'S',
     't',
     'a',
     'c',
     'k',
     ' ',
-    'd',
+  ]
+  const jobArraySecondLine = [
+    'D',
     'e',
     'v',
     'e',
@@ -60,21 +62,31 @@ const Home = () => {
             <br />
             <span className={`${letterClass} _13`}>I</span>
             <span className={`${letterClass} _14`}>'m</span>
-            <img
-              src={LogoTitle}
-              alt="Daniel Chow logo"
-            />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              idx={15}
-            />
+            <span className="name-lockup">
+              <img
+                src={LogoTitle}
+                alt="Daniel Chow logo"
+              />
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={nameArray}
+                idx={15}
+              />
+            </span>
             <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobArray}
-              idx={22}
-            />
+            <span className="job-lockup">
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={jobArray}
+                idx={22}
+              />
+              <span className="job-break" />
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={jobArraySecondLine}
+                idx={32}
+              />
+            </span>
           </h1>
           <h2>Full Stack Developer / Java / JavaScript</h2>
           <Link to="/contact" className="flat-button">
